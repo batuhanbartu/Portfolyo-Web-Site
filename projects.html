@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batuhan BARTU Kişisel Web Sitesi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">BB</a>
+        <div class="menu-icon" onclick="openMenu()">☰</div>
+    </nav>
+
+    <div id="overlay" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About / CV</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="projects-content">
+        <h3>PROJECTS</h3>
+        <h1>LATEST WORKS</h1>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="fullstack">Full Stack</button>
+            <button class="filter-btn" data-category="frontend">Frontend</button>
+            <button class="filter-btn" data-category="freelance">Freelance Works</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="frontend">
+                <img src="images/title-img.jpg" alt="JS Workspace">
+                <h2>JS Workspace</h2>
+            </div>
+            <div class="project-card" data-category="freelance">
+                <img src="images/title-img.jpg" alt="Fast Food">
+                <h2>JS Workspace</h2>
+            </div>
+            <div class="project-card" data-category="frontend">
+                <img src="images/title-img.jpg" alt="Twitter Clone">
+                <h2>JS Workspace</h2>
+            </div>
+            <div class="project-card" data-category="frontend">
+                <img src="images/title-img.jpg" alt="Starlight Template">
+                <h2>JS Workspace</h2>
+            </div>
+            <div class="project-card" data-category="fullstack">
+                <img src="images/title-img.jpg" alt="Chess Game">
+                <h2>JS Workspace</h2>
+            </div>
+            <div class="project-card" data-category="freelance">
+                <img src="images/title-img.jpg" alt="NFT Art">
+                <h2>JS Workspace</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

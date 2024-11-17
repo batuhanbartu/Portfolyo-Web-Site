@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batuhan BARTU Kişisel Web Sitesi</title>
+    <!-- CSS dosyasını css klasöründen dahil ediyoruz -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar başlangıcı -->
+    <nav class="navbar">
+        <!-- Logo kısmı, anasayfaya yönlendirme -->
+        <a href="index.html" class="logo">BB</a>
+        <!-- Menü ikonu -->
+        <div class="menu-icon" onclick="openMenu()">☰</div>
+    </nav>
+
+    <!-- Tam ekran menü -->
+    <div id="overlay" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About / CV</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Ana içerik alanı -->
+    <div class="main-content">
+        <!-- Tanıtım metni -->
+        <div class="intro">
+            <img src="https://readme-typing-svg.demolab.com?font=Kanit&size=34&pause=1000&color=FFFFFF&width=421&lines=Hello%2C;I'm+BARTU;Welcome+to+My+Web+Site" alt="Typing SVG" />
+            <h2>Computer Engineer</h2>
+            <!-- About sayfasına yönlendirme butonu -->
+            <a href="about.html" class="more-btn">More About Me</a>
+        </div>
+        <!-- Profil resmi -->
+        <div class="profile-image">
+            <img src="images/pp.jpg" alt="Profile">
+        </div>
+    </div>
+
+    <!-- JavaScript dosyasını js klasöründen dahil ediyoruz -->
+    <script src="js/script.js"></script>
+</body>
+</html>

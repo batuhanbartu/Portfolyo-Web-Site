@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batuhan BARTU Kişisel Web Sitesi</title>
+    <!-- Harici CSS dosyasını dahil ediyoruz -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">BB</a>
+        <div class="menu-icon" onclick="openMenu()">☰</div>
+    </nav>
+
+    <div id="overlay" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About / CV</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="about-content">
+        <div class="profile-section">
+            <img src="images/pp.jpg" alt="Profile Picture">
+        </div>
+        <div class="info-section">
+            <h1>ABOUT ME</h1>
+            <p>⚡ As a final-year Computer Engineering student, I am dedicated to advancing my skills and knowledge in cybersecurity. With a foundational understanding of web, database, and mobile technologies, I am motivated to deepen my expertise in this field. Known for my detail-oriented approach, curiosity, and passion for research, I am also a strong team player eager to contribute to cybersecurity projects and further develop through practical experience.</p>
+                <a href="cv.pdf" class="btn">Download CV</a>
+                <a href="contact.html" class="btn">Hire Me</a>
+            </div>
+        </div>
+        <div class="about-social">
+            <a href="https://github.com/batuhanbartu" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/batuhanbartu" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://medium.com/@batuhanbartu" target="_blank"><i class="fab fa-medium"></i></a>
+            <a href="https://twitter.com/senseicivi" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+     <!-- Skills Section -->
+     <div class="skills-section">
+        <div class="skills-tabs">
+            <span class="tab active">Skills</span>
+        </div>
+        
+        <div class="skills-category">
+            <h4>WEB Tech</h4>
+            <div class="icons">
+                <!-- Örnek ikon, burada kendi ikonlarını eklemen gerekir -->
+                 <a href="https://skillicons.dev">
+                    <img src="https://skillicons.dev/icons?i=html,css,js,nodejs">
+                 </a>
+            </div>
+        </div>
+        
+        <div class="skills-category">
+            <h4>IDE</h4>
+            <div class="icons">
+                <a href="https://skillicons.dev">
+                    <img src="https://skillicons.dev/icons?i=vscode,visualstudio,pycharm,idea">
+                 </a>
+            </div>
+        </div>
+        
+        <div class="skills-category">
+            <h4>Programming Language</h4>
+            <div class="icons">
+                <a href="https://skillicons.dev">
+                    <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,py">
+                 </a>
+        </div>
+        
+        <div class="skills-category">
+            <h4>Database</h4>
+            <div class="icons">
+                <a href="https://skillicons.dev">
+                    <img src="https://skillicons.dev/icons?i=mysql,mongodb">
+                 </a>
+            </div>
+        </div>
+        
+        <div class="skills-category">
+            <h4>Other Tech</h4>
+            <div class="icons">
+                <a href="https://skillicons.dev">
+                    <img src="https://skillicons.dev/icons?i=linux,postman,arduino,kali,docker">
+                 </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript dosyasını dahil ediyoruz -->
+    <script src="js/script.js"></script>
+</body>
+</html>
