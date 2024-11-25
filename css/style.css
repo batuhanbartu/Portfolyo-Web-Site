@@ -1,4 +1,5 @@
 /* Genel ayarlar */
+/* Tüm HTML elemanlarına varsayılan margin ve padding değerlerini sıfırlıyor ve box-sizing ayarını border-box yapıyor. */
 * {
     margin: 0;
     padding: 0;
@@ -6,537 +7,635 @@
 }
 
 /* Genel Gövde */
+/* Sayfa gövdesinin genel görünümünü düzenliyor: yazı tipi, arka plan rengi ve metin rengini belirliyor. */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+    font-family: Arial, sans-serif; /* Arial yazı tipi */
+    background-color: #1e1e1e; /* Koyu gri arka plan */
+    color: #f0f0f0; /* Açık gri metin rengi */
 }
 
 /* Navbar */
+/* Üst menü çubuğu (navbar) ayarları: esnek düzen ve pozisyonlama ile ekranın üst kısmında sabitleniyor. */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    position: absolute;
-    width: 100%;
-    top: 0;
+    display: flex; /* Esnek kutu düzeni */
+    justify-content: space-between; /* İçerikleri iki uç noktaya yerleştiriyor */
+    padding: 20px; /* İç boşluk */
+    position: absolute; /* Üstte sabit pozisyon */
+    width: 100%; /* Tam genişlik */
+    top: 0; /* Sayfanın en üstüne yerleştiriliyor */
 }
 
 /* Logo ayarları */
+/* Navbar üzerindeki logonun yazı tipi boyutu, rengi ve konumlandırması düzenleniyor. */
 .logo {
-    font-size: 28px;
-    color: #4e91ff;
-    font-weight: bold;
-    text-decoration: none;
-    margin-left: 160px;
+    font-size: 28px; /* Yazı tipi boyutu */
+    color: #4e91ff; /* Mavi renk */
+    font-weight: bold; /* Kalın yazı stili */
+    text-decoration: none; /* Alt çizgi kaldırılıyor */
+    margin-left: 160px; /* Soldan boşluk */
 }
 
 /* Menü ikonu */
+/* Navbar üzerindeki menü simgesi için stil ayarları. */
 .menu-icon {
-    font-size: 30px;
-    color: #4e91ff;
-    cursor: pointer;
-    margin-right: 160px;
+    font-size: 30px; /* Simge boyutu */
+    color: #4e91ff; /* Mavi renk */
+    cursor: pointer; /* Üzerine gelindiğinde fare işaretçisi değişiyor */
+    margin-right: 160px; /* Sağdan boşluk */
 }
 
 /* Tam ekran menü */
+/* Mobil veya tam ekran menü açıldığında kullanılan kaplama görünümünün ayarları. */
 .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.95); /* Şeffaf siyah arka plan */
-    overflow-x: hidden;
-    transition: width 0.5s ease;
+    height: 100%; /* Tam yükseklik */
+    width: 0; /* Başlangıçta görünmez */
+    position: fixed; /* Sayfa boyunca sabitleniyor */
+    top: 0; /* Sayfanın en üstünden başlıyor */
+    right: 0; /* Sağdan itibaren açılıyor */
+    background-color: rgba(0, 0, 0, 0.95); /* Hafif şeffaf siyah arka plan */
+    overflow-x: hidden; /* Yatay kaydırmayı engelliyor */
+    transition: width 0.5s ease; /* Genişlik değişiminde yumuşak geçiş efekti */
 }
 
 /* Menüyü kapatma ve bağlantılar */
+/* Overlay içeriği (bağlantılar ve kapatma düğmesi) için düzenlemeler. */
 .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
+    position: relative; /* Normal akışa göre konumlandırma */
+    top: 25%; /* Üstten boşluk (menü ortalanıyor) */
+    width: 100%; /* Tam genişlik */
+    text-align: center; /* Metinleri ortalıyor */
 }
 
 .overlay-content a {
-    padding: 15px;
-    font-size: 24px;
-    color: #4e91ff;
-    display: block;
-    text-decoration: none;
-    margin: 10px 0;
-    border-radius: 5px;
-    background: #333;
+    padding: 15px; /* İç boşluk */
+    font-size: 24px; /* Yazı boyutu */
+    color: #4e91ff; /* Mavi renk */
+    display: block; /* Blok eleman */
+    text-decoration: none; /* Alt çizgi kaldırılıyor */
+    margin: 10px 0; /* Üst ve alt boşluk */
+    border-radius: 5px; /* Köşeler yuvarlatılıyor */
+    background: #333; /* Koyu gri arka plan */
 }
 
+/* Kapama düğmesi */
+/* Overlay menüyü kapatmak için kullanılan X işareti stili. */
 .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    font-size: 40px;
-    color: #4e91ff;
-    cursor: pointer;
+    position: absolute; /* Kendi kapsayıcısında konumlandırılıyor */
+    top: 20px; /* Üstten boşluk */
+    right: 35px; /* Sağdan boşluk */
+    font-size: 40px; /* Yazı boyutu */
+    color: #4e91ff; /* Mavi renk */
+    cursor: pointer; /* Üzerine gelindiğinde fare işaretçisi değişiyor */
 }
 
 /* Ana içerik */
+/* Sayfa ana içeriğinin düzenlenmesi: elemanların ortalanması ve düzenlenmesi. */
 .main-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
+    display: flex; /* Esnek kutu düzeni */
+    align-items: center; /* Dikeyde ortalama */
+    justify-content: space-around; /* Elemanları eşit boşlukla dağıtma */
+    height: 100vh; /* Tam ekran yüksekliği */
 }
 
 /* Tanıtım alanı */
+/* Metinlerin yer aldığı tanıtım alanı düzenlemesi. */
 .intro {
-    max-width: 500px;
-    text-align: left;
+    max-width: 500px; /* Maksimum genişlik */
+    text-align: left; /* Metni sola hizalama */
 }
 
 .intro h1 {
-    font-size: 48px;
+    font-size: 48px; /* Başlık boyutu */
 }
 
 .intro h2 {
-    font-size: 24px;
-    color: #888;
+    font-size: 24px; /* Alt başlık boyutu */
+    color: #888; /* Açık gri metin rengi */
 }
 
+/* "Daha fazla" butonu */
+/* Sayfada kullanılan "Daha Fazla" (more-btn) butonunun tasarımı. */
 .more-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4e91ff;
-    color: #fff;
-    border-radius: 20px;
-    text-decoration: none;
-    margin-top: 20px;
+    display: inline-block; /* Satır içi blok eleman */
+    padding: 10px 20px; /* İç boşluk: üst-alt 10px, sağ-sol 20px */
+    background-color: #4e91ff; /* Arka plan rengi: mavi */
+    color: #fff; /* Metin rengi: beyaz */
+    border-radius: 20px; /* Köşelerin yuvarlatılması */
+    text-decoration: none; /* Alt çizgi kaldırılıyor */
+    margin-top: 20px; /* Üstten boşluk */
 }
 
 /* Profil resmi */
+/* Profil resmi çerçevesi ve genel stili. */
 .profile-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #333;
+    width: 300px; /* Genişlik */
+    height: 300px; /* Yükseklik */
+    border-radius: 50%; /* Daire görünüm */
+    overflow: hidden; /* Taşan içerikleri gizle */
+    border: 5px solid #333; /* Koyu gri çerçeve */
 }
 
+/* Profil resminin içindeki görüntü */
+/* Resmin çerçeve içinde doğru şekilde görünmesini sağlar. */
 .profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 100%; /* Resim çerçevenin genişliğini kaplar */
+    height: 100%; /* Resim çerçevenin yüksekliğini kaplar */
+    object-fit: cover; /* Resmi kırpıp çerçeveye sığdırır */
+    border-radius: 50%; /* Resmi daire şeklinde gösterir */
 }
 
 /* Genel ayarlar */
+/* Tüm HTML elemanlarının varsayılan boşluk ve çerçeve modellemesini düzenler. */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Varsayılan dış boşlukları sıfırlar */
+    padding: 0; /* Varsayılan iç boşlukları sıfırlar */
+    box-sizing: border-box; /* Elemanların boyutlandırma modelini "border-box" yapar */
 }
 
 /* Gövde ayarları */
+/* Sayfanın genel tasarımı: yazı tipi, arka plan rengi ve metin rengi. */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+    font-family: Arial, sans-serif; /* Arial yazı tipi */
+    background-color: #1e1e1e; /* Koyu gri arka plan */
+    color: #f0f0f0; /* Açık gri metin rengi */
 }
 
 /* Navbar ayarları */
+/* Sayfanın en üst kısmında bulunan navigasyon çubuğu. */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    display: flex; /* Esnek kutu düzeni */
+    justify-content: space-between; /* İçerikleri iki uç noktaya yerleştiriyor */
+    padding: 20px; /* İç boşluk */
+    position: absolute; /* Sayfanın üst kısmına sabitleniyor */
+    width: 100%; /* Tam genişlik */
+    top: 0; /* Sayfanın en üstüne yerleştiriliyor */
+    z-index: 1000; /* Diğer içeriklerin üzerinde görünmesini sağlar */
 }
 
+/* Navbar logosu */
+/* Navigasyon çubuğundaki logonun tasarımı. */
 .logo {
-    font-size: 24px;
-    color: #4e91ff;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 24px; /* Yazı tipi boyutu */
+    color: #4e91ff; /* Mavi renk */
+    text-decoration: none; /* Alt çizgi kaldırılıyor */
+    font-weight: bold; /* Kalın yazı stili */
 }
 
+/* Menü ikonu */
+/* Navbar'daki menü açma simgesinin tasarımı. */
 .menu-icon {
-    font-size: 30px;
-    color: #4e91ff;
-    cursor: pointer;
+    font-size: 30px; /* Simge boyutu */
+    color: #4e91ff; /* Mavi renk */
+    cursor: pointer; /* Üzerine gelindiğinde fare işaretçisi değişiyor */
 }
 
 /* Overlay menü */
+/* Ekranı kaplayan tam ekran menü tasarımı. */
 .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    transition: width 0.5s;
-    z-index: 1001;
+    height: 100%; /* Tam yükseklik */
+    width: 0; /* Başlangıçta görünmez */
+    position: fixed; /* Sabit pozisyon (scroll'dan etkilenmez) */
+    top: 0; /* Sayfanın en üstünden başlıyor */
+    right: 0; /* Sağdan itibaren açılıyor */
+    background-color: rgba(0, 0, 0, 0.9); /* Şeffaf siyah arka plan */
+    overflow-x: hidden; /* Yatay kaydırmayı engeller */
+    transition: width 0.5s; /* Genişlik değişiminde yumuşak geçiş efekti */
+    z-index: 1001; /* Navbar'ın üzerinde yer alır */
 }
 
+/* Overlay menü içeriği */
+/* Menü bağlantılarını ve içeriği düzenler. */
 .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
+    position: relative; /* Normal akışa göre konumlandırma */
+    top: 25%; /* Üstten boşluk (menü ortalanıyor) */
+    width: 100%; /* Tam genişlik */
+    text-align: center; /* Metni ortalıyor */
 }
 
+/* Overlay menüdeki bağlantılar */
+/* Bağlantıların tasarımı ve etkileşimleri. */
 .overlay-content a {
-    padding: 15px;
-    font-size: 24px;
-    color: #4e91ff;
-    display: block;
-    text-decoration: none;
+    padding: 15px; /* İç boşluk */
+    font-size: 24px; /* Yazı boyutu */
+    color: #4e91ff; /* Mavi renk */
+    display: block; /* Blok eleman */
+    text-decoration: none; /* Alt çizgi kaldırılıyor */
 }
 
+/* Overlay menüyü kapatma düğmesi */
+/* X simgesinin tasarımı ve konumlandırması. */
 .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    font-size: 40px;
-    color: #4e91ff;
+    position: absolute; /* Sabit bir pozisyonda yerleştiriliyor */
+    top: 20px; /* Üstten boşluk */
+    right: 35px; /* Sağdan boşluk */
+    font-size: 40px; /* Yazı boyutu */
+    color: #4e91ff; /* Mavi renk */
 }
 
 /* About sayfası ana içerik */
+/* Sayfanın ana yapısı: profil kısmı ve bilgi kısmının yerleşimi */
 .about-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 100px 50px 50px 50px;
-    gap: 50px;
+    display: flex; /* Elemanları yatayda hizalar */
+    align-items: flex-start; /* Elemanları dikeyde üstte hizalar */
+    justify-content: center; /* Elemanları yatayda ortalar */
+    padding: 100px 50px 50px 50px; /* Üstte 100px, diğer kenarlarda 50px boşluk */
+    gap: 50px; /* İki içerik alanı arasında boşluk */
 }
 
 /* Profil resmi ve sosyal ikonlar */
+/* Profil resmi ve sosyal medya ikonlarının gruplandırıldığı bölüm */
 .profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; /* Profil resmi ve ikonlar arasında boşluk */
+    display: flex; /* Elemanları dikeyde hizalar */
+    flex-direction: column; /* Elemanları sütun şeklinde yerleştirir */
+    align-items: center; /* Ortalar */
+    gap: 15px; /* Profil resmi ile sosyal medya ikonları arasındaki boşluk */
 }
 
+/* Profil resmi */
+/* Profil resminin boyutu, şekli ve çerçeve stili */
 .profile-section img {
-    width: 300px;
-    height: 300px;
-    border-radius: 15px;
-    object-fit: cover;
-    border: 5px solid #333;
+    width: 300px; /* Genişlik */
+    height: 300px; /* Yükseklik */
+    border-radius: 15px; /* Köşelerin yuvarlatılması */
+    object-fit: cover; /* Resmi çerçeveye uygun şekilde kesip yerleştirir */
+    border: 5px solid #333; /* Koyu gri çerçeve */
 }
 
-/* Social Media Icons */
+/* Sosyal medya ikonları */
+/* Sosyal medya ikonlarının düzeni */
 .about-social {
-    display: flex;
-    justify-content: left;
-    margin-left: 360px;
-    gap: 20px;
-    margin-top: 20px;
+    display: flex; /* Elemanları yatayda hizalar */
+    justify-content: left; /* İkonları sola hizalar */
+    margin-left: 360px; /* Sol kenardan boşluk */
+    gap: 20px; /* İkonlar arasındaki boşluk */
+    margin-top: 20px; /* Üstten boşluk */
 }
 
+/* Sosyal medya bağlantı ikonları */
+/* İkonların rengi, boyutu ve geçiş efektleri */
 .about-social a {
-    color: #4e91ff;
-    font-size: 24px;
-    transition: transform 0.3s, color 0.3s;
+    color: #4e91ff; /* Mavi renk */
+    font-size: 24px; /* Yazı boyutu */
+    transition: transform 0.3s, color 0.3s; /* Renk ve büyüklük için yumuşak geçiş efekti */
 }
 
+/* Sosyal medya ikonları üzerine gelindiğinde */
+/* İkonların rengi değişir ve büyür */
 .about-social a:hover {
-    color: #ff5757;
-    transform: scale(1.2);
+    color: #ff5757; /* Renk kırmızıya döner */
+    transform: scale(1.2); /* İkon %20 oranında büyür */
 }
-
-
 
 /* Bilgi bölümü */
+/* Kullanıcı hakkında bilgilerin yer aldığı metin alanı */
 .info-section {
-    max-width: 600px;
-    color: #f0f0f0;
-    text-align: left;
+    max-width: 600px; /* Maksimum genişlik */
+    color: #f0f0f0; /* Açık gri metin rengi */
+    text-align: left; /* Metni sola hizalar */
 }
 
+/* Bilgi bölümü başlıkları */
+/* Küçük başlıkların tasarımı */
 .info-section h3 {
-    color: #4e91ff;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    color: #4e91ff; /* Mavi renk */
+    text-transform: uppercase; /* Harfleri büyük yapar */
+    margin-bottom: 10px; /* Alt kısımdan boşluk */
 }
 
+/* Ana başlık */
+/* Büyük başlıkların tasarımı */
 .info-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 36px; /* Yazı boyutu */
+    margin-bottom: 20px; /* Alt kısımdan boşluk */
 }
 
+/* Metin paragrafı */
+/* Paragraf içeriğinin tasarımı */
 .info-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    font-size: 18px; /* Yazı boyutu */
+    line-height: 1.6; /* Satır arası boşluk */
+    margin-bottom: 15px; /* Alt kısımdan boşluk */
 }
 
+/* Butonlar bölümü */
+/* Sayfa içindeki buton grubunun düzeni */
 .buttons {
-    margin-top: 20px;
+    margin-top: 20px; /* Üstten boşluk */
 }
 
+/* Genel buton tasarımı */
+/* Sayfadaki butonların görünümü ve davranışı */
 .btn {
-    padding: 10px 20px;
-    background-color: #4e91ff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: background-color 0.3s;
+    padding: 10px 20px; /* İç boşluk: üst-alt 10px, sağ-sol 20px */
+    background-color: #4e91ff; /* Mavi arka plan rengi */
+    color: #fff; /* Beyaz metin rengi */
+    text-decoration: none; /* Alt çizgi kaldırılır */
+    border-radius: 5px; /* Köşeler yuvarlatılır */
+    margin-right: 10px; /* Sağdan boşluk */
+    transition: background-color 0.3s; /* Arka plan rengi değişiminde yumuşak geçiş efekti */
 }
 
+/* Buton üzerine gelindiğinde */
+/* Butonların hover (fare üzerine gelme) davranışı */
 .btn:hover {
-    background-color: #ff5757;
+    background-color: #ff5757; /* Arka plan rengi kırmızıya döner */
 }
 
 /* Skills section */
+/* Beceriler bölümü: üst alan ve genel metin düzeni */
 .skills-section {
-    margin-top: 50px;
-    padding: 20px;
-    color: #f0f0f0;
-    text-align: left;
+    margin-top: 50px; /* Üstten boşluk */
+    padding: 20px; /* İç boşluk */
+    color: #f0f0f0; /* Açık gri metin rengi */
+    text-align: left; /* Metni sola hizalar */
 }
 
 /* Tab style */
+/* Kategoriler için sekmelerin düzeni */
 .skills-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
+    display: flex; /* Sekmeleri yatay hizalar */
+    justify-content: center; /* Sekmeleri yatayda ortalar */
+    gap: 20px; /* Sekmeler arasındaki boşluk */
+    margin-bottom: 20px; /* Sekmelerin alt kısmına boşluk */
 }
 
+/* Sekme tasarımı */
 .tab {
-    font-size: 16px;
-    color: #4e91ff;
-    cursor: pointer;
-    padding: 5px 10px;
+    font-size: 16px; /* Yazı boyutu */
+    color: #4e91ff; /* Mavi renk */
+    cursor: pointer; /* İmleç değişimi */
+    padding: 5px 10px; /* İç boşluk */
 }
 
+/* Aktif sekme stili */
 .tab.active {
-    font-weight: bold;
-    text-decoration: underline;
+    font-weight: bold; /* Kalın yazı */
+    text-decoration: underline; /* Alt çizgi */
 }
 
 /* Category title */
+/* Her beceri kategorisinin başlığı */
 .skills-category {
-    margin-top: 20px;
+    margin-top: 20px; /* Üstten boşluk */
 }
 
 .skills-category h4 {
-    font-size: 20px;
-    color: #4e91ff;
-    margin-bottom: 10px;
+    font-size: 20px; /* Yazı boyutu */
+    color: #4e91ff; /* Mavi renk */
+    margin-bottom: 10px; /* Alt boşluk */
 }
 
 /* Icon container */
+/* Becerilere ait ikonların düzeni */
 .icons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    display: flex; /* İkonları yatay hizalar */
+    gap: 10px; /* İkonlar arasındaki boşluk */
+    flex-wrap: wrap; /* Alan dolduğunda ikonları bir alt satıra geçirir */
 }
 
 .icons img {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s;
+    width: 100%; /* İkon genişliği */
+    height: 100%; /* İkon yüksekliği */
+    transition: transform 0.3s; /* Ölçeklendirme geçiş efekti */
 }
 
-
-/*
-.icons img:hover {
-    transform: scale(1.1);  /*emin olamadım belki bunu sonra eklerim
-}
+/* İkona hover efekti eklenmek istenirse aktif hale getirilebilir 
+// .icons img:hover {
+//     transform: scale(1.1);  İkon %10 büyür 
+// }
 */
 
-
 /* Hobbies Section */
+/* Hobiler bölümü düzeni */
 .hobbies-content {
-    text-align: center;
-    padding: 100px 20px;
+    text-align: center; /* Metni ortalar */
+    padding: 100px 20px; /* Üstten ve diğer kenarlardan boşluk */
 }
 
 .hobbies-content h3 {
-    color: #4e91ff;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    color: #4e91ff; /* Mavi renk */
+    text-transform: uppercase; /* Harfleri büyük yapar */
+    margin-bottom: 10px; /* Alt boşluk */
 }
 
 .hobbies-content h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 36px; /* Büyük başlık yazı boyutu */
+    margin-bottom: 30px; /* Alt boşluk */
 }
 
 /* Hobbies grid */
+/* Hobilerin ızgara düzeni */
 .hobbies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    display: grid; /* Izgara düzeni */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dinamik sütunlar */
+    gap: 20px; /* Izgara öğeleri arasındaki boşluk */
+    padding: 20px; /* Izgara kenar boşlukları */
 }
 
 .hobby-card {
-    background-color: #333;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #333; /* Koyu gri arka plan */
+    padding: 30px; /* İç boşluk */
+    border-radius: 10px; /* Köşeleri yuvarlat */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Hafif gölge */
+    text-align: center; /* Metni ortalar */
+    transition: transform 0.3s, box-shadow 0.3s; /* Geçiş efektleri */
 }
 
 .hobby-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05); /* Kart %5 büyür */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7); /* Daha belirgin gölge */
 }
 
 .icon {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 40px; /* İkon boyutu */
+    margin-bottom: 10px; /* İkon ile metin arasındaki boşluk */
 }
 
 .hobby-card h2 {
-    color: #f0f0f0;
-    font-size: 18px;
-    margin: 10px 0;
+    color: #f0f0f0; /* Başlık metin rengi */
+    font-size: 18px; /* Yazı boyutu */
+    margin: 10px 0; /* Alt ve üst boşluk */
 }
 
 .hobby-card p {
-    color: #cccccc;
-    font-size: 14px;
+    color: #cccccc; /* Paragraf metin rengi */
+    font-size: 14px; /* Yazı boyutu */
 }
 
 /* Projects Content */
+/* Projeler bölümü düzeni */
 .projects-content {
-    text-align: center;
-    padding: 100px 20px;
+    text-align: center; /* Metni ortalar */
+    padding: 100px 20px; /* Kenar boşlukları */
 }
 
 .projects-content h3 {
-    color: #4e91ff;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    color: #4e91ff; /* Mavi renk */
+    text-transform: uppercase; /* Harfleri büyük yapar */
+    margin-bottom: 10px; /* Alt boşluk */
 }
 
 .projects-content h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 36px; /* Büyük başlık yazı boyutu */
+    margin-bottom: 30px; /* Alt boşluk */
 }
 
 /* Filter Buttons */
+/* Filtreleme butonları düzeni */
 .filter-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
+    display: flex; /* Butonları yatay hizalar */
+    justify-content: center; /* Butonları ortalar */
+    gap: 20px; /* Butonlar arasındaki boşluk */
+    margin-bottom: 30px; /* Alt boşluk */
 }
 
 .filter-btn {
-    background-color: #333;
-    color: #f0f0f0;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #333; /* Koyu gri arka plan */
+    color: #f0f0f0; /* Beyaz metin rengi */
+    border: none; /* Kenar çerçevesi yok */
+    padding: 10px 20px; /* İç boşluk */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    cursor: pointer; /* İmleç değişimi */
+    transition: background-color 0.3s; /* Geçiş efekti */
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-    background-color: #4e91ff;
+    background-color: #4e91ff; /* Mavi arka plan */
 }
 
 /* Projects Grid */
+/* Projelerin ızgara düzeni */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    display: grid; /* Izgara düzeni */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dinamik sütun genişliği */
+    gap: 20px; /* Öğeler arasındaki boşluk */
+    padding: 20px; /* Kenar boşlukları */
 }
 
+/* Proje Kartları Tasarımı */
+/* Kartların genel stili */
 .project-card {
-    background-color: #333;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #333; /* Koyu gri arka plan */
+    border-radius: 10px; /* Köşeleri yuvarlatır */
+    overflow: hidden; /* Taşan içeriği gizler */
+    text-align: center; /* Metni ortalar */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hover efektleri için geçiş süreleri */
 }
 
+/* Hover Durumu */
+/* Fareyle üzerine gelindiğinde büyüme ve gölge efekti */
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05); /* %5 büyür */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7); /* Daha belirgin gölge */
 }
 
+/* Proje Görselleri */
+/* Kart içindeki görsel düzeni */
 .project-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    width: 100%; /* Görselin genişliği kartın tamamını kaplar */
+    height: 150px; /* Sabit yükseklik */
+    object-fit: cover; /* Görseli kırpmadan doldurur */
 }
 
+/* Proje Başlıkları */
+/* Kart başlık stili */
 .project-card h2 {
-    font-size: 18px;
-    color: #f0f0f0;
-    margin: 15px;
+    font-size: 18px; /* Yazı boyutu */
+    color: #f0f0f0; /* Beyaz metin */
+    margin: 15px; /* Kenarlardan boşluk */
 }
 
-/* Contact Content */
+/* İletişim İçeriği Düzeni */
+/* Genel iletişim bölümü düzeni */
 .contact-content {
-    text-align: center;
-    padding: 100px 20px;
+    text-align: center; /* Metni ortalar */
+    padding: 100px 20px; /* Üst-alt ve kenar boşlukları */
 }
 
+/* İletişim Başlıkları */
 .contact-content h3 {
-    color: #4e91ff;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    color: #4e91ff; /* Mavi metin */
+    text-transform: uppercase; /* Büyük harf */
+    margin-bottom: 10px; /* Alt boşluk */
 }
 
 .contact-content h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 36px; /* Büyük başlık yazı boyutu */
+    margin-bottom: 30px; /* Alt boşluk */
 }
 
-/* Contact Grid */
+/* İletişim Izgara Düzeni */
+/* İletişim kartlarının yerleşimi */
 .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+    display: grid; /* Izgara düzeni */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dinamik sütun sayısı */
+    gap: 20px; /* Kartlar arasındaki boşluk */
+    padding: 20px; /* Kenar boşlukları */
+    max-width: 1000px; /* Maksimum genişlik */
+    margin: 0 auto; /* Ortalar */
 }
 
-/* Contact Card */
+/* İletişim Kartları */
 .contact-card {
-    background-color: #333;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #333; /* Koyu gri arka plan */
+    text-align: center; /* Metni ortalar */
+    padding: 20px; /* İç boşluk */
+    border-radius: 10px; /* Köşeleri yuvarlatır */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Hafif gölge */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hover geçiş süreleri */
 }
 
+/* Hover Durumu */
+/* Fareyle üzerine gelindiğinde büyüme ve gölge efekti */
 .contact-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05); /* %5 büyür */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7); /* Daha belirgin gölge */
 }
 
+/* İletişim İkonları */
 .contact-card i {
-    font-size: 36px;
-    color: #4e91ff;
-    margin-bottom: 10px;
+    font-size: 36px; /* Büyük ikon boyutu */
+    color: #4e91ff; /* Mavi renk */
+    margin-bottom: 10px; /* Alt boşluk */
 }
 
+/* İletişim Başlıkları */
 .contact-card h2 {
-    font-size: 18px;
-    color: #f0f0f0;
-    margin: 10px 0;
+    font-size: 18px; /* Yazı boyutu */
+    color: #f0f0f0; /* Beyaz metin */
+    margin: 10px 0; /* Alt-üst boşluk */
 }
 
+/* İletişim Metinleri */
 .contact-card p {
-    font-size: 14px;
-    color: #cccccc;
+    font-size: 14px; /* Küçük metin boyutu */
+    color: #cccccc; /* Açık gri renk */
 }
+
+/* Footer Genel Ayarları */
+.footer {
+    background-color: #1e1e1e; /* Arka plan koyu gri */
+    color: #f0f0f0; /* Yazı rengi açık gri */
+    text-align: center; /* Ortaya hizalama */
+    padding: 10px 20px; /* Üst-alt ve sağ-sol boşluk */
+    font-size: 14px; /* Yazı boyutu */
+    position: relative; /* Footer'ın yerini sabitlememek için */
+    bottom: 0; /* Alt hizaya */
+    width: 100%; /* Tam genişlik */
+}
+
+/* Marka İsim Stili */
+.footer .footer-brand {
+    color: #ffffff; /* Marka ismi rengi */
+    font-weight: bold; /* Kalın yazı */
+    text-decoration: none; /* Alt çizgi olmaması */
+}
+
+.footer .footer-brand:hover {
+    color: #ff5757; /* Hover durumunda renk değişimi */
+}
+
 
 /* Mobil ve tablet için genel düzenlemeler */
 @media (max-width: 1024px) {
@@ -606,47 +705,11 @@ body {
     .contact-grid {
         grid-template-columns: 1fr; /* Kartlar alt alta sıralanır */
     }
+
+    
 }
 
 /* RESPONSİVE BURDA EKLENMİŞTİR*/
-
-@media (max-width: 1024px) {
-    /* Navbar */
-    .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 20px;
-    }
-
-    .logo {
-        font-size: 22px; /* Daha uygun boyutta logo */
-        margin-left: 10px; /* Daha az kenar boşluğu */
-    }
-
-    .menu-icon {
-        font-size: 26px;
-        margin-right: 10px;
-    }
-
-    /* Profil Fotoğrafı */
-    .profile-image {
-        width: 250px;
-        height: 250px; /* Çok küçülmeyi önledik */
-    }
-
-    /* About Content */
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-        padding: 20px; /* Kenar boşluğu daha iyi */
-    }
-
-    .info-section {
-        max-width: 90%;
-    }
-}
 
 /* Mobil uyumu (daha küçük ekranlar için) */
 @media (max-width: 768px) {
@@ -689,4 +752,5 @@ body {
         margin: 0 auto;
         width: 90%; /* Genişlik cihazla uyumlu */
     }
+
 }

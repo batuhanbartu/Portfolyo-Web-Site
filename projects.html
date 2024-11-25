@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batuhan BARTU Kişisel Web Sitesi</title>
+    <!-- CSS dosyasını bağlar -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Navbar Başlangıcı -->
     <nav class="navbar">
+        <!-- Logo (Ana sayfaya yönlendiren bağlantı) -->
         <a href="index.html" class="logo">BB</a>
+        <!-- Menü ikonu (Mobil ve küçük ekranlar için açılır menü) -->
         <div class="menu-icon" onclick="openMenu()">☰</div>
     </nav>
+    <!-- Navbar Sonu -->
 
+    <!-- Açılır Menü (Overlay Menü) -->
     <div id="overlay" class="overlay">
+        <!-- Menüyü kapatmak için çarpı işareti -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
         <div class="overlay-content">
+            <!-- Menü içindeki bağlantılar -->
             <a href="index.html">Home</a>
             <a href="about.html">About / CV</a>
             <a href="hobbies.html">Hobbies</a>
@@ -23,45 +31,65 @@
         </div>
     </div>
 
+    <!-- Projeler İçeriği Başlangıcı -->
     <div class="projects-content">
+        <!-- Başlıklar -->
         <h3>PROJECTS</h3>
         <h1>LATEST WORKS</h1>
 
+        <!-- Filtre Butonları -->
         <div class="filter-buttons">
+            <!-- "All" Kategorisi -->
             <button class="filter-btn active" data-category="all">All</button>
+            <!-- "Full Stack" Kategorisi -->
             <button class="filter-btn" data-category="fullstack">Full Stack</button>
+            <!-- "Frontend" Kategorisi -->
             <button class="filter-btn" data-category="frontend">Frontend</button>
+            <!-- "Freelance Works" Kategorisi -->
             <button class="filter-btn" data-category="freelance">Freelance Works</button>
         </div>
 
+        <!-- Projeler Grid Düzeni -->
         <div class="projects-grid">
+            <!-- Proje Kartı 1 -->
             <div class="project-card" data-category="frontend">
                 <img src="images/title-img.jpg" alt="JS Workspace">
                 <h2>JS Workspace</h2>
             </div>
+            <!-- Proje Kartı 2 -->
             <div class="project-card" data-category="freelance">
                 <img src="images/title-img.jpg" alt="Fast Food">
                 <h2>JS Workspace</h2>
             </div>
+            <!-- Proje Kartı 3 -->
             <div class="project-card" data-category="frontend">
                 <img src="images/title-img.jpg" alt="Twitter Clone">
                 <h2>JS Workspace</h2>
             </div>
+            <!-- Proje Kartı 4 -->
             <div class="project-card" data-category="frontend">
                 <img src="images/title-img.jpg" alt="Starlight Template">
                 <h2>JS Workspace</h2>
             </div>
+            <!-- Proje Kartı 5 -->
             <div class="project-card" data-category="fullstack">
                 <img src="images/title-img.jpg" alt="Chess Game">
                 <h2>JS Workspace</h2>
             </div>
+            <!-- Proje Kartı 6 -->
             <div class="project-card" data-category="freelance">
                 <img src="images/title-img.jpg" alt="NFT Art">
                 <h2>JS Workspace</h2>
             </div>
         </div>
     </div>
+    <!-- Projeler İçeriği Sonu -->
 
+    <footer class="footer">
+        <p>&copy; 2024 <span class="footer-brand">BARTU</span> | All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Dosyasını Bağlar -->
     <script src="js/script.js"></script>
 </body>
 </html>
